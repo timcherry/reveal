@@ -13,8 +13,6 @@
 		2281D68619186BCE0096129A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2281D68419186BCE0096129A /* InfoPlist.strings */; };
 		2281D68819186BCE0096129A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D68719186BCE0096129A /* main.m */; };
 		2281D68C19186BCE0096129A /* revealAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D68B19186BCE0096129A /* revealAppDelegate.m */; };
-		2281D68F19186BCE0096129A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2281D68D19186BCE0096129A /* Main_iPhone.storyboard */; };
-		2281D69219186BCE0096129A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2281D69019186BCE0096129A /* Main_iPad.storyboard */; };
 		2281D69519186BCE0096129A /* revealFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D69419186BCE0096129A /* revealFirstViewController.m */; };
 		2281D69819186BCE0096129A /* revealSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D69719186BCE0096129A /* revealSecondViewController.m */; };
 		2281D69A19186BCE0096129A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2281D69919186BCE0096129A /* Images.xcassets */; };
@@ -23,6 +21,7 @@
 		2281D6A319186BCE0096129A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2281D67F19186BCE0096129A /* UIKit.framework */; };
 		2281D6AB19186BCE0096129A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2281D6A919186BCE0096129A /* InfoPlist.strings */; };
 		2281D6AD19186BCE0096129A /* revealTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D6AC19186BCE0096129A /* revealTests.m */; };
+		2281D6B719186F850096129A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2281D6B619186F850096129A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +45,6 @@
 		2281D68919186BCE0096129A /* reveal-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "reveal-Prefix.pch"; sourceTree = "<group>"; };
 		2281D68A19186BCE0096129A /* revealAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = revealAppDelegate.h; sourceTree = "<group>"; };
 		2281D68B19186BCE0096129A /* revealAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = revealAppDelegate.m; sourceTree = "<group>"; };
-		2281D68E19186BCE0096129A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		2281D69119186BCE0096129A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		2281D69319186BCE0096129A /* revealFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = revealFirstViewController.h; sourceTree = "<group>"; };
 		2281D69419186BCE0096129A /* revealFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = revealFirstViewController.m; sourceTree = "<group>"; };
 		2281D69619186BCE0096129A /* revealSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = revealSecondViewController.h; sourceTree = "<group>"; };
@@ -58,6 +55,7 @@
 		2281D6A819186BCE0096129A /* revealTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "revealTests-Info.plist"; sourceTree = "<group>"; };
 		2281D6AA19186BCE0096129A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2281D6AC19186BCE0096129A /* revealTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = revealTests.m; sourceTree = "<group>"; };
+		2281D6B619186F850096129A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +117,7 @@
 			children = (
 				2281D68A19186BCE0096129A /* revealAppDelegate.h */,
 				2281D68B19186BCE0096129A /* revealAppDelegate.m */,
-				2281D68D19186BCE0096129A /* Main_iPhone.storyboard */,
-				2281D69019186BCE0096129A /* Main_iPad.storyboard */,
+				2281D6B619186F850096129A /* Main.storyboard */,
 				2281D69319186BCE0096129A /* revealFirstViewController.h */,
 				2281D69419186BCE0096129A /* revealFirstViewController.m */,
 				2281D69619186BCE0096129A /* revealSecondViewController.h */,
@@ -237,9 +234,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2281D69219186BCE0096129A /* Main_iPad.storyboard in Resources */,
+				2281D6B719186F850096129A /* Main.storyboard in Resources */,
 				2281D69A19186BCE0096129A /* Images.xcassets in Resources */,
-				2281D68F19186BCE0096129A /* Main_iPhone.storyboard in Resources */,
 				2281D68619186BCE0096129A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,22 +287,6 @@
 				2281D68519186BCE0096129A /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		2281D68D19186BCE0096129A /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2281D68E19186BCE0096129A /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		2281D69019186BCE0096129A /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2281D69119186BCE0096129A /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		2281D6A919186BCE0096129A /* InfoPlist.strings */ = {
