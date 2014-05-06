@@ -7,12 +7,28 @@
 //
 
 #import "revealListTableViewController.h"
+#import "revealListItem.h"
+
 
 @interface revealListTableViewController ()
+
+@property NSMutableArray *toDoItems;
 
 @end
 
 @implementation revealListTableViewController
+
+- (void)loadInitialData {
+    revealListItem *item1 = [[revealListItem alloc] init];
+    item1.itemName = @"Buy milk";
+    [self.toDoItems addObject:item1];
+    revealListItem *item2 = [[revealListItem alloc] init];
+    item2.itemName = @"Buy eggs";
+    [self.toDoItems addObject:item2];
+    revealListItem *item3 = [[revealListItem alloc] init];
+    item3.itemName = @"Read a book";
+    [self.toDoItems addObject:item3];
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +42,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.toDoItems = [[NSMutableArray alloc] init];
+    [self loadInitialData];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -33,6 +51,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -46,26 +66,28 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.toDoItems count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"ListPrototypeCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    revealListItem *toDoItem = [self.toDoItems objectAtIndex:indexPath.row];
+    cell.textLabel.text = toDoItem.itemName;
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
