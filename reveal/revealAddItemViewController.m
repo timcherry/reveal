@@ -6,13 +6,15 @@
 //  Copyright (c) 2014 Tim Cherry. All rights reserved.
 //
 
-#import "AddItemViewController.h"
+#import "revealAddItemViewController.h"
 
-@interface AddItemViewController ()
+@interface revealAddItemViewController ()
 
 @end
 
-@implementation AddItemViewController
+@implementation revealAddItemViewController
+- (IBAction)textField:(id)sender {
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="623" y="89"/>
         </scene>
-        <!--Add Item View Controller-->
+        <!--Reveal Add Item View Controller-->
         <scene sceneID="fRh-dk-0IR">
             <objects>
-                <viewController id="jse-HW-LyN" customClass="AddItemViewController" sceneMemberID="viewController">
+                <viewController id="jse-HW-LyN" customClass="revealAddItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ENm-9u-yLQ"/>
                         <viewControllerLayoutGuide type="bottom" id="fYH-Hz-MRA"/>
@@ -96,15 +96,21 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kaF-OD-M89">
-                                <rect key="frame" x="112" y="269" width="97" height="30"/>
+                                <rect key="frame" x="120" y="269" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textField:" destination="jse-HW-LyN" eventType="editingDidEnd" id="qHU-Xy-vTq"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="9fw-5Q-nib"/>
+                    <connections>
+                        <outlet property="textField" destination="kaF-OD-M89" id="pvD-vU-vYf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4q-u2-TyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

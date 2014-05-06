@@ -23,7 +23,7 @@
 		2281D6AD19186BCE0096129A /* revealTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D6AC19186BCE0096129A /* revealTests.m */; };
 		2281D6B719186F850096129A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2281D6B619186F850096129A /* Main.storyboard */; };
 		2281D6BA19187CC60096129A /* reveal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D6B919187CC60096129A /* reveal.m */; };
-		2281D6BD19188FFE0096129A /* AddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D6BC19188FFE0096129A /* AddItemViewController.m */; };
+		2281D6BD19188FFE0096129A /* revealAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D6BC19188FFE0096129A /* revealAddItemViewController.m */; };
 		2281D6C01918916C0096129A /* revealListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D6BF1918916C0096129A /* revealListTableViewController.m */; };
 		2281D6C3191895740096129A /* revealListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D6C2191895740096129A /* revealListItem.m */; };
 /* End PBXBuildFile section */
@@ -62,8 +62,8 @@
 		2281D6B619186F850096129A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2281D6B819187CC60096129A /* reveal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reveal.h; sourceTree = "<group>"; };
 		2281D6B919187CC60096129A /* reveal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = reveal.m; sourceTree = "<group>"; };
-		2281D6BB19188FFE0096129A /* AddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemViewController.h; sourceTree = "<group>"; };
-		2281D6BC19188FFE0096129A /* AddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemViewController.m; sourceTree = "<group>"; };
+		2281D6BB19188FFE0096129A /* revealAddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = revealAddItemViewController.h; sourceTree = "<group>"; };
+		2281D6BC19188FFE0096129A /* revealAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = revealAddItemViewController.m; sourceTree = "<group>"; };
 		2281D6BE1918916C0096129A /* revealListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = revealListTableViewController.h; sourceTree = "<group>"; };
 		2281D6BF1918916C0096129A /* revealListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = revealListTableViewController.m; sourceTree = "<group>"; };
 		2281D6C1191895740096129A /* revealListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = revealListItem.h; sourceTree = "<group>"; };
@@ -142,8 +142,8 @@
 				2281D69719186BCE0096129A /* revealSecondViewController.m */,
 				2281D69919186BCE0096129A /* Images.xcassets */,
 				2281D68219186BCE0096129A /* Supporting Files */,
-				2281D6BB19188FFE0096129A /* AddItemViewController.h */,
-				2281D6BC19188FFE0096129A /* AddItemViewController.m */,
+				2281D6BB19188FFE0096129A /* revealAddItemViewController.h */,
+				2281D6BC19188FFE0096129A /* revealAddItemViewController.m */,
 			);
 			path = reveal;
 			sourceTree = "<group>";
@@ -276,7 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2281D68819186BCE0096129A /* main.m in Sources */,
-				2281D6BD19188FFE0096129A /* AddItemViewController.m in Sources */,
+				2281D6BD19188FFE0096129A /* revealAddItemViewController.m in Sources */,
 				2281D6BA19187CC60096129A /* reveal.m in Sources */,
 				2281D69819186BCE0096129A /* revealSecondViewController.m in Sources */,
 				2281D6C01918916C0096129A /* revealListTableViewController.m in Sources */,
