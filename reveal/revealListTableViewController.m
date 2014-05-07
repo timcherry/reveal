@@ -31,6 +31,18 @@
 }
 
 - (void)loadInitialData {
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]
+                                    initWithURL:[NSURL
+                                                 URLWithString:@"http://localhost:8000/reveal?id=534cc1c56608dd1d55c4444d"]];
+    
+    [request setHTTPMethod:@"GET"];
+    [request setValue:@"application/json;charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    NSURLResponse *response;
+    NSData *GETReply = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
+    NSString *theReply = [[NSString alloc] initWithBytes:[GETReply bytes] length:[GETReply length] encoding: NSASCIIStringEncoding];
+    NSLog(@"Reply: %@", theReply);
+    
+    
     revealListItem *item1 = [[revealListItem alloc] init];
     item1.itemName = @"Buy milk";
     [self.toDoItems addObject:item1];
@@ -38,7 +50,7 @@
     item2.itemName = @"Buy eggs";
     [self.toDoItems addObject:item2];
     revealListItem *item3 = [[revealListItem alloc] init];
-    item3.itemName = @"Read a book";
+    item3.itemName = theReply;
     [self.toDoItems addObject:item3];
 }
 
