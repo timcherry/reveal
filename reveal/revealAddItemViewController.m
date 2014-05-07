@@ -9,10 +9,22 @@
 #import "revealAddItemViewController.h"
 
 @interface revealAddItemViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *TextField;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
 @end
 
 @implementation revealAddItemViewController
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if (sender != self.doneButton) return;
+    if (self.textField.text.length > 0) {
+        self.toDoItem = [[revealListItem alloc] init];
+        self.toDoItem.itemName = self.textField.text;
+        self.toDoItem.completed = NO;
+    }
+}
+
 - (IBAction)textField:(id)sender {
 }
 

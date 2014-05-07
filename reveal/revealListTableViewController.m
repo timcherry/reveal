@@ -8,6 +8,7 @@
 
 #import "revealListTableViewController.h"
 #import "revealListItem.h"
+#import "revealAddItemViewController.h"
 
 
 @interface revealListTableViewController ()
@@ -17,6 +18,17 @@
 @end
 
 @implementation revealListTableViewController
+
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue
+{
+    revealAddItemViewController *source = [segue sourceViewController];
+    revealListItem *item = source.toDoItem;
+    if (item != nil) {
+        [self.toDoItems addObject:item];
+        [self.tableView reloadData];
+    }
+    
+}
 
 - (void)loadInitialData {
     revealListItem *item1 = [[revealListItem alloc] init];

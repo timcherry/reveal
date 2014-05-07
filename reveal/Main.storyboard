@@ -83,7 +83,7 @@
             </objects>
             <point key="canvasLocation" x="623" y="89"/>
         </scene>
-        <!--Reveal Add Item View Controller-->
+        <!--Reveal Add Item View Controller - Add Item-->
         <scene sceneID="fRh-dk-0IR">
             <objects>
                 <viewController id="jse-HW-LyN" customClass="revealAddItemViewController" sceneMemberID="viewController">
@@ -96,7 +96,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kaF-OD-M89">
-                                <rect key="frame" x="120" y="269" width="97" height="30"/>
+                                <rect key="frame" x="60" y="269" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -107,12 +107,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9fw-5Q-nib"/>
+                    <navigationItem key="navigationItem" title="Add Item" id="9fw-5Q-nib">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="8xW-4N-G2i">
+                            <connections>
+                                <segue destination="n8s-IL-JIz" kind="unwind" unwindAction="unwindToList:" id="LqC-uG-Etd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="Djs-K5-Ley">
+                            <connections>
+                                <segue destination="n8s-IL-JIz" kind="unwind" unwindAction="unwindToList:" id="Yky-Cy-KuJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="TextField" destination="kaF-OD-M89" id="19j-fq-Ap7"/>
+                        <outlet property="doneButton" destination="Djs-K5-Ley" id="TjI-Tz-hv1"/>
                         <outlet property="textField" destination="kaF-OD-M89" id="pvD-vU-vYf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4q-u2-TyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="n8s-IL-JIz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1122" y="89"/>
         </scene>
