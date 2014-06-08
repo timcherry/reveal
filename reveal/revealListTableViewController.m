@@ -31,27 +31,43 @@
 }
 
 - (void)loadInitialData {
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]
-                                    initWithURL:[NSURL
-                                                 URLWithString:@"http://localhost:8000/reveal?id=534cc1c56608dd1d55c4444d"]];
     
-    [request setHTTPMethod:@"GET"];
-    [request setValue:@"application/json;charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
-    NSURLResponse *response;
-    NSData *GETReply = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
-    NSString *theReply = [[NSString alloc] initWithBytes:[GETReply bytes] length:[GETReply length] encoding: NSASCIIStringEncoding];
-    NSLog(@"Reply: %@", theReply);
-    
-    
-    revealListItem *item1 = [[revealListItem alloc] init];
-    item1.itemName = @"Buy milk";
-    [self.toDoItems addObject:item1];
-    revealListItem *item2 = [[revealListItem alloc] init];
-    item2.itemName = @"Buy eggs";
-    [self.toDoItems addObject:item2];
-    revealListItem *item3 = [[revealListItem alloc] init];
-    item3.itemName = theReply;
-    [self.toDoItems addObject:item3];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL
+                                                          URLWithString:@"http://localhost:8000/api"]];
+    NSData *response = [NSURLConnection sendSynchronousRequest:request
+                                             returningResponse:nil error:nil];
+
+    NSError *jsonParsingError = nil;
+    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:response options:0 error: &jsonParsingError];
+    NSLog(@"Reply: %@", jsonArray);
+    for(NSDictionary *item in jsonArray) {
+        NSLog(@"Item: %@", [item valueForKey
+                            :@"hidden_comment"]);
+        
+        revealListItem *listitem = [[revealListItem alloc] init];
+        listitem.itemName = [item valueForKey
+                             :@"hidden_comment"];
+        [self.toDoItems addObject:listitem];
+    }
+                               
+//    
+//    [request setHTTPMethod:@"GET"];
+//    [request setValue:@"application/json;charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+//    NSURLResponse *response;
+//    NSData *GETReply = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
+//    NSString *theReply = [[NSString alloc] initWithBytes:[GETReply bytes] length:[GETReply length] encoding: NSASCIIStringEncoding];
+//    NSLog(@"Reply: %@", theReply);
+//    
+//    
+//    revealListItem *item1 = [[revealListItem alloc] init];
+//    item1.itemName = @"Buy milk";
+//    [self.toDoItems addObject:item1];
+//    revealListItem *item2 = [[revealListItem alloc] init];
+//    item2.itemName = @"Buy eggs";
+//    [self.toDoItems addObject:item2];
+//    revealListItem *item3 = [[revealListItem alloc] init];
+//    item3.itemName = theReply;
+//    [self.toDoItems addObject:item3];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
