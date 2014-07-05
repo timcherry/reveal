@@ -49,10 +49,13 @@
     [self.view addSubview:scrollView];
     
     for(NSDictionary *item in jsonArray){
-        UILabel *comment = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 250, 200)];
+        UILabel *comment = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, 280, 200)];
         
         comment.text = [item valueForKey
                      :@"hidden_comment"];
+        
+        comment.numberOfLines = 3;
+        comment.textAlignment = NSTextAlignmentCenter;
         
         UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(10, bottomYPos, 200, bottomHeight)];
         
@@ -60,12 +63,15 @@
                     :@"pretty_date"];
         
         date.adjustsFontSizeToFitWidth = YES;
+        date.textAlignment = NSTextAlignmentLeft;
         
         UILabel *company = [[UILabel alloc] initWithFrame:CGRectMake(200, bottomYPos, 120, bottomHeight)];
         
         company.text =[item valueForKeyPath
                       :@"company"];
         company.adjustsFontSizeToFitWidth = YES;
+        company.textAlignment = NSTextAlignmentRight;
+
         
         UIView *myView = [[UIView alloc] initWithFrame:CGRectMake(xPos, yPos, width, height)];
         
