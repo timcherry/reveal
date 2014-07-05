@@ -8,9 +8,9 @@
         <scene sceneID="94M-vV-11V">
             <objects>
                 <viewController id="bF0-gy-thD" customClass="revealXYZViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="h1r-RO-v5n">
+                    <view key="view" contentMode="top" id="h1r-RO-v5n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tesdignaginadgasdlkgjasdkgjasdlasd" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mXy-ZJ-rIk">
                                 <rect key="frame" x="46" y="190" width="228" height="88"/>
@@ -44,10 +44,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pdr-c0-Nbg"/>
                     </navigationItem>
                     <size key="freeformSize" width="320" height="568"/>
-                    <connections>
-                        <outlet property="companyLabel" destination="AoQ-If-x7C" id="nrz-GC-sIm"/>
-                        <outlet property="textLabel" destination="mXy-ZJ-rIk" id="Rod-Qj-mz8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbZ-3b-f4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,6 +224,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="6o7-kY-JRR"/>
+        <segue reference="voN-BG-6F5"/>
     </inferredMetricsTieBreakers>
 </document>

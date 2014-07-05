@@ -9,9 +9,6 @@
 #import "revealXYZViewController.h"
 
 @interface revealXYZViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
-@property (weak, nonatomic) IBOutlet UILabel *companyLabel;
-
 @end
 
 @implementation revealXYZViewController
@@ -34,18 +31,33 @@
     
     NSError *jsonParsingError = nil;
     NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:response options:0 error: &jsonParsingError];
+    
     NSLog(@"Reply: %@", jsonArray);
+    
     for(NSDictionary *item in jsonArray) {
-        self.textLabel.text = [item valueForKey
-                               :@"hidden_comment"];
-        self.companyLabel.text = [item valueForKeyPath
-                                  :@"company"];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, 250, 15)];
+        
+        label.text = [item valueForKey
+                     :@"hidden_comment"];
+        
+        UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 250, 15)];
+        
+        label1.text =[item valueForKeyPath
+                      :@"company"];
+        
+        UIView *myView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
+        
+        [myView addSubview:label];
+        [myView addSubview:label1];
+        
+        [self.view  addSubview: myView];
     }
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //[self.view setBackgroundColor:[UIColor blackColor]];
     [self loadInitialData];
 //
 //    NSString *foobar = @"abcdefg";
