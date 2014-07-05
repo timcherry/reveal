@@ -24,6 +24,7 @@
 		2281D6BD19188FFE0096129A /* revealAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D6BC19188FFE0096129A /* revealAddItemViewController.m */; };
 		2281D6C01918916C0096129A /* revealListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D6BF1918916C0096129A /* revealListTableViewController.m */; };
 		2281D6C3191895740096129A /* revealListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D6C2191895740096129A /* revealListItem.m */; };
+		22B8CD0819679D5A00D0D795 /* revealXYZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B8CD0719679D5A00D0D795 /* revealXYZViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		2281D6BF1918916C0096129A /* revealListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = revealListTableViewController.m; sourceTree = "<group>"; };
 		2281D6C1191895740096129A /* revealListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = revealListItem.h; sourceTree = "<group>"; };
 		2281D6C2191895740096129A /* revealListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = revealListItem.m; sourceTree = "<group>"; };
+		22B8CD0619679D5A00D0D795 /* revealXYZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = revealXYZViewController.h; sourceTree = "<group>"; };
+		22B8CD0719679D5A00D0D795 /* revealXYZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = revealXYZViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				2281D68A19186BCE0096129A /* revealAppDelegate.h */,
+				22B8CD0619679D5A00D0D795 /* revealXYZViewController.h */,
+				22B8CD0719679D5A00D0D795 /* revealXYZViewController.m */,
 				2281D68B19186BCE0096129A /* revealAppDelegate.m */,
 				2281D6B619186F850096129A /* Main.storyboard */,
 				2281D6C1191895740096129A /* revealListItem.h */,
@@ -265,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B8CD0819679D5A00D0D795 /* revealXYZViewController.m in Sources */,
 				2281D68819186BCE0096129A /* main.m in Sources */,
 				2281D6BD19188FFE0096129A /* revealAddItemViewController.m in Sources */,
 				2281D6BA19187CC60096129A /* reveal.m in Sources */,
