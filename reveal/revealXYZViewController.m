@@ -34,23 +34,53 @@
     
     NSLog(@"Reply: %@", jsonArray);
     
-    for(NSDictionary *item in jsonArray) {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, 250, 15)];
+    NSInteger yOffset = 0;
+    
+    
+    UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    scrollView.backgroundColor = [UIColor redColor];
+    scrollView.scrollEnabled = YES;
+    scrollView.pagingEnabled = YES;
+    scrollView.showsVerticalScrollIndicator = YES;
+    //scrollView.showsHorizontalScrollIndicator = YES;
+    scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height*5);
+    [self.view addSubview:scrollView];
+    
+    float width = 50;
+    float height = 50;
+    float xPos = 10;
+    float yPos = 10;
+    
+//    UIView* view1 = [[UIView alloc] initWithFrame:CGRectMake(xPos, yPos, width, height)];
+//    view1.backgroundColor = [UIColor blueColor];
+//    [scrollView addSubview:view1];
+//    
+//    UIView* view2 = [[UIView alloc] initWithFrame:CGRectMake(xPos, self.view.bounds.size.height + yPos, width, height)];
+//    view2.backgroundColor = [UIColor greenColor];
+//    [scrollView addSubview:view2];
+    
+    for(NSDictionary *item in jsonArray){
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, 250, 200)];
         
         label.text = [item valueForKey
                      :@"hidden_comment"];
+        label.lineBreakMode =NSLineBreakByWordWrapping;
         
-        UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 250, 15)];
+        UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(220, 200, 250, 15)];
         
         label1.text =[item valueForKeyPath
                       :@"company"];
+    
+        UIView *myView = [[UIView alloc] initWithFrame:CGRectMake(xPos, yPos, 320, 220)];
+    
+        myView.backgroundColor = [UIColor greenColor];
         
-        UIView *myView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
+        yPos += 220;
         
         [myView addSubview:label];
         [myView addSubview:label1];
         
-        [self.view  addSubview: myView];
+        [scrollView  addSubview: myView];
     }
 }
 
