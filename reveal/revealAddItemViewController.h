@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "revealListItem.h"
 
-@interface revealAddItemViewController : UIViewController
+@interface revealAddItemViewController : UIViewController{
+    IBOutlet UIScrollView *scroller;
+}
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @property revealListItem *toDoItem;

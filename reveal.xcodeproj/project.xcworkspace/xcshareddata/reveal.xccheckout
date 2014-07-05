@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B481E9D8-FA8A-47A5-9335-DA88BE970A43</string>
+	<key>IDESourceControlProjectName</key>
+	<string>reveal</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>755E96C1-F58A-41A2-9DF8-AF6FFF1704FB</key>
+		<string>ssh://github.com/timcherry/reveal.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>reveal.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>755E96C1-F58A-41A2-9DF8-AF6FFF1704FB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/timcherry/reveal.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>755E96C1-F58A-41A2-9DF8-AF6FFF1704FB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>755E96C1-F58A-41A2-9DF8-AF6FFF1704FB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>reveal</string>
+		</dict>
+	</array>
+</dict>
+</plist>

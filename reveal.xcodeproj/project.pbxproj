@@ -13,8 +13,6 @@
 		2281D68619186BCE0096129A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2281D68419186BCE0096129A /* InfoPlist.strings */; };
 		2281D68819186BCE0096129A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D68719186BCE0096129A /* main.m */; };
 		2281D68C19186BCE0096129A /* revealAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D68B19186BCE0096129A /* revealAppDelegate.m */; };
-		2281D69519186BCE0096129A /* revealFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D69419186BCE0096129A /* revealFirstViewController.m */; };
-		2281D69819186BCE0096129A /* revealSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281D69719186BCE0096129A /* revealSecondViewController.m */; };
 		2281D69A19186BCE0096129A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2281D69919186BCE0096129A /* Images.xcassets */; };
 		2281D6A119186BCE0096129A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2281D6A019186BCE0096129A /* XCTest.framework */; };
 		2281D6A219186BCE0096129A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2281D67B19186BCE0096129A /* Foundation.framework */; };
@@ -49,10 +47,6 @@
 		2281D68919186BCE0096129A /* reveal-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "reveal-Prefix.pch"; sourceTree = "<group>"; };
 		2281D68A19186BCE0096129A /* revealAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = revealAppDelegate.h; sourceTree = "<group>"; };
 		2281D68B19186BCE0096129A /* revealAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = revealAppDelegate.m; sourceTree = "<group>"; };
-		2281D69319186BCE0096129A /* revealFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = revealFirstViewController.h; sourceTree = "<group>"; };
-		2281D69419186BCE0096129A /* revealFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = revealFirstViewController.m; sourceTree = "<group>"; };
-		2281D69619186BCE0096129A /* revealSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = revealSecondViewController.h; sourceTree = "<group>"; };
-		2281D69719186BCE0096129A /* revealSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = revealSecondViewController.m; sourceTree = "<group>"; };
 		2281D69919186BCE0096129A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2281D69F19186BCE0096129A /* revealTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = revealTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2281D6A019186BCE0096129A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -136,14 +130,10 @@
 				2281D6C2191895740096129A /* revealListItem.m */,
 				2281D6BE1918916C0096129A /* revealListTableViewController.h */,
 				2281D6BF1918916C0096129A /* revealListTableViewController.m */,
-				2281D69319186BCE0096129A /* revealFirstViewController.h */,
-				2281D69419186BCE0096129A /* revealFirstViewController.m */,
-				2281D69619186BCE0096129A /* revealSecondViewController.h */,
-				2281D69719186BCE0096129A /* revealSecondViewController.m */,
-				2281D69919186BCE0096129A /* Images.xcassets */,
-				2281D68219186BCE0096129A /* Supporting Files */,
 				2281D6BB19188FFE0096129A /* revealAddItemViewController.h */,
 				2281D6BC19188FFE0096129A /* revealAddItemViewController.m */,
+				2281D69919186BCE0096129A /* Images.xcassets */,
+				2281D68219186BCE0096129A /* Supporting Files */,
 			);
 			path = reveal;
 			sourceTree = "<group>";
@@ -278,10 +268,8 @@
 				2281D68819186BCE0096129A /* main.m in Sources */,
 				2281D6BD19188FFE0096129A /* revealAddItemViewController.m in Sources */,
 				2281D6BA19187CC60096129A /* reveal.m in Sources */,
-				2281D69819186BCE0096129A /* revealSecondViewController.m in Sources */,
 				2281D6C01918916C0096129A /* revealListTableViewController.m in Sources */,
 				2281D6C3191895740096129A /* revealListItem.m in Sources */,
-				2281D69519186BCE0096129A /* revealFirstViewController.m in Sources */,
 				2281D68C19186BCE0096129A /* revealAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +469,7 @@
 				2281D6B219186BCE0096129A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2281D6B319186BCE0096129A /* Build configuration list for PBXNativeTarget "revealTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +478,7 @@
 				2281D6B519186BCE0096129A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

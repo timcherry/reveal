@@ -49,25 +49,6 @@
                              :@"hidden_comment"];
         [self.toDoItems addObject:listitem];
     }
-                               
-//    
-//    [request setHTTPMethod:@"GET"];
-//    [request setValue:@"application/json;charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
-//    NSURLResponse *response;
-//    NSData *GETReply = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
-//    NSString *theReply = [[NSString alloc] initWithBytes:[GETReply bytes] length:[GETReply length] encoding: NSASCIIStringEncoding];
-//    NSLog(@"Reply: %@", theReply);
-//    
-//    
-//    revealListItem *item1 = [[revealListItem alloc] init];
-//    item1.itemName = @"Buy milk";
-//    [self.toDoItems addObject:item1];
-//    revealListItem *item2 = [[revealListItem alloc] init];
-//    item2.itemName = @"Buy eggs";
-//    [self.toDoItems addObject:item2];
-//    revealListItem *item3 = [[revealListItem alloc] init];
-//    item3.itemName = theReply;
-//    [self.toDoItems addObject:item3];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
