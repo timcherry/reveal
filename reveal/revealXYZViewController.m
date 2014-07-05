@@ -34,51 +34,51 @@
     
     NSLog(@"Reply: %@", jsonArray);
     
-    NSInteger yOffset = 0;
-    
-    
-    UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-    scrollView.backgroundColor = [UIColor redColor];
-    scrollView.scrollEnabled = YES;
-    scrollView.pagingEnabled = YES;
-    scrollView.showsVerticalScrollIndicator = YES;
-    //scrollView.showsHorizontalScrollIndicator = YES;
-    scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height*5);
-    [self.view addSubview:scrollView];
-    
-    float width = 50;
-    float height = 50;
-    float xPos = 10;
+    float width = self.view.bounds.size.width;
+    float height = 220;
+    float xPos = 0;
     float yPos = 10;
     
-//    UIView* view1 = [[UIView alloc] initWithFrame:CGRectMake(xPos, yPos, width, height)];
-//    view1.backgroundColor = [UIColor blueColor];
-//    [scrollView addSubview:view1];
-//    
-//    UIView* view2 = [[UIView alloc] initWithFrame:CGRectMake(xPos, self.view.bounds.size.height + yPos, width, height)];
-//    view2.backgroundColor = [UIColor greenColor];
-//    [scrollView addSubview:view2];
+    UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    scrollView.scrollEnabled = YES;
+    scrollView.showsVerticalScrollIndicator = YES;
+    scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, height*[jsonArray count]);
+    [self.view addSubview:scrollView];
     
     for(NSDictionary *item in jsonArray){
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, 250, 200)];
+        UILabel *comment = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 250, 200)];
         
-        label.text = [item valueForKey
+        comment.text = [item valueForKey
                      :@"hidden_comment"];
-        label.lineBreakMode =NSLineBreakByWordWrapping;
         
-        UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(220, 200, 250, 15)];
+        UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(10, 180, 200, 20)];
         
-        label1.text =[item valueForKeyPath
+        date.text =[item valueForKeyPath
+                    :@"pretty_date"];
+        
+        date.adjustsFontSizeToFitWidth = YES;
+        
+        UILabel *company = [[UILabel alloc] initWithFrame:CGRectMake(200, 180, 120, 20)];
+        
+        company.text =[item valueForKeyPath
                       :@"company"];
-    
-        UIView *myView = [[UIView alloc] initWithFrame:CGRectMake(xPos, yPos, 320, 220)];
-    
-        myView.backgroundColor = [UIColor greenColor];
+        company.adjustsFontSizeToFitWidth = YES;
         
-        yPos += 220;
+        UIView *myView = [[UIView alloc] initWithFrame:CGRectMake(xPos, yPos, width, height)];
         
-        [myView addSubview:label];
-        [myView addSubview:label1];
+        
+        // Random Color
+        CGFloat hue = ( arc4random() % 256 / 256.0 );  //  0.0 to 1.0
+        CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from white
+        CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
+        UIColor *color = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
+        myView.backgroundColor = color;
+        
+        yPos += height;
+        
+        [myView addSubview:comment];
+        [myView addSubview:company];
+        [myView addSubview:date];
         
         [scrollView  addSubview: myView];
     }
