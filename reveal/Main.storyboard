@@ -14,7 +14,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Reveal" id="w9N-dM-WIG">
-                        <barButtonItem key="rightBarButtonItem" tag="-1" title="comment" id="l5N-HD-L6y">
+                        <barButtonItem key="rightBarButtonItem" tag="-1" systemItem="compose" id="l5N-HD-L6y">
                             <connections>
                                 <segue destination="jse-HW-LyN" kind="push" id="qte-ta-iBW"/>
                             </connections>
@@ -67,7 +67,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Comment" id="7eY-ct-YJW">
-                        <barButtonItem key="rightBarButtonItem" title="Submit" id="y63-Fq-yUq"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="y63-Fq-yUq"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>

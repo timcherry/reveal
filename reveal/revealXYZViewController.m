@@ -39,7 +39,7 @@
     float xPos = 0;
     float yPos = 0;
     
-    float bottomHeight = 20;
+    float bottomHeight = 40;
     float bottomYPos = height - bottomHeight;
     
     UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
