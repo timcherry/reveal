@@ -37,7 +37,7 @@
     float width = self.view.bounds.size.width;
     float height = 320;
     float xPos = 0;
-    float yPos = 20;
+    float yPos = 64;
     
     float bottomHeight = 30;
     float bottomYPos = height - bottomHeight;
