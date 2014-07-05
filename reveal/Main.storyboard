@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9zf-vf-Nxh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="cwR-tD-gZo">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -8,33 +8,15 @@
         <scene sceneID="94M-vV-11V">
             <objects>
                 <viewController id="bF0-gy-thD" customClass="revealXYZViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="top" id="h1r-RO-v5n">
+                    <view key="view" contentMode="center" id="h1r-RO-v5n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UZF-wx-mUZ">
-                                <rect key="frame" x="20" y="102" width="280" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Reveal" id="E1G-W1-Icu">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="n6u-pF-zgw">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tCl-al-cOX">
-                                <rect key="frame" x="16" y="5" width="71" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pdr-c0-Nbg">
+                    <navigationItem key="navigationItem" title="Reveal" id="w9N-dM-WIG">
+                        <barButtonItem key="rightBarButtonItem" tag="-1" title="comment" id="l5N-HD-L6y">
                             <connections>
-                                <segue destination="jse-HW-LyN" kind="push" id="Rg6-3V-OSO"/>
+                                <segue destination="jse-HW-LyN" kind="push" id="qte-ta-iBW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -42,9 +24,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbZ-3b-f4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912" y="-1206"/>
+            <point key="canvasLocation" x="2602" y="-1039"/>
         </scene>
-        <!--Reveal Add Item View Controller - Add Item-->
+        <!--Reveal Add Item View Controller - Add Comment-->
         <scene sceneID="fRh-dk-0IR">
             <objects>
                 <viewController id="jse-HW-LyN" customClass="revealAddItemViewController" sceneMemberID="viewController">
@@ -71,57 +53,51 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Comment..." borderStyle="roundedRect" minimumFontSize="17" id="swQ-1e-O3L">
-                                        <rect key="frame" x="20" y="117" width="280" height="30"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="nhk-Z4-xcj">
+                                        <rect key="frame" x="20" y="126" width="280" height="194"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Item" id="9fw-5Q-nib">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="8xW-4N-G2i">
-                            <connections>
-                                <segue destination="bF0-gy-thD" kind="push" id="J1g-gm-ccv"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="Djs-K5-Ley"/>
+                    <navigationItem key="navigationItem" title="Add Comment" id="7eY-ct-YJW">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="y63-Fq-yUq"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="TextField" destination="kaF-OD-M89" id="19j-fq-Ap7"/>
-                        <outlet property="commentBox" destination="swQ-1e-O3L" id="Q3R-TP-mkx"/>
-                        <outlet property="doneButton" destination="Djs-K5-Ley" id="TjI-Tz-hv1"/>
                         <outlet property="scroller" destination="7Fa-k1-PAs" id="O3i-ut-FCt"/>
                         <outlet property="textField" destination="kaF-OD-M89" id="pvD-vU-vYf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4q-u2-TyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1122" y="89"/>
+            <point key="canvasLocation" x="3226" y="-1039"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="vCm-jA-ulA">
+        <scene sceneID="9Yq-bg-Z4J">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9zf-vf-Nxh" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cwR-tD-gZo" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="sq2-dF-Bjp"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tqL-ax-Mbz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="thd-pc-FKw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="bF0-gy-thD" kind="relationship" relationship="rootViewController" id="tBO-BG-iJN"/>
+                        <segue destination="bF0-gy-thD" kind="relationship" relationship="rootViewController" id="Z2a-Yt-d7t"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KTY-db-CAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pzX-ZB-9ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="412" y="-1010"/>
+            <point key="canvasLocation" x="1996" y="-1039"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -129,7 +105,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="J1g-gm-ccv"/>
-    </inferredMetricsTieBreakers>
 </document>
