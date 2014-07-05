@@ -35,9 +35,12 @@
     NSLog(@"Reply: %@", jsonArray);
     
     float width = self.view.bounds.size.width;
-    float height = 220;
+    float height = 320;
     float xPos = 0;
-    float yPos = 10;
+    float yPos = 20;
+    
+    float bottomHeight = 30;
+    float bottomYPos = height - bottomHeight;
     
     UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     scrollView.scrollEnabled = YES;
@@ -51,14 +54,14 @@
         comment.text = [item valueForKey
                      :@"hidden_comment"];
         
-        UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(10, 180, 200, 20)];
+        UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(10, bottomYPos, 200, bottomHeight)];
         
         date.text =[item valueForKeyPath
                     :@"pretty_date"];
         
         date.adjustsFontSizeToFitWidth = YES;
         
-        UILabel *company = [[UILabel alloc] initWithFrame:CGRectMake(200, 180, 120, 20)];
+        UILabel *company = [[UILabel alloc] initWithFrame:CGRectMake(200, bottomYPos, 120, bottomHeight)];
         
         company.text =[item valueForKeyPath
                       :@"company"];
