@@ -101,17 +101,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self.view setBackgroundColor:[UIColor blackColor]];
     [self loadData];
-//
-//    NSString *foobar = @"abcdefg";
-//    self.textLabel.text = foobar;
-//    
-//    NSString *foobaz = @"Livefyre";
-//    self.companyLabel.text = foobaz;
-
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
