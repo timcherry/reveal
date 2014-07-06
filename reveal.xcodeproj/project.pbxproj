@@ -59,6 +59,10 @@
 		2281D6BC19188FFE0096129A /* revealAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = revealAddItemViewController.m; sourceTree = "<group>"; };
 		22B8CD0619679D5A00D0D795 /* revealXYZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = revealXYZViewController.h; sourceTree = "<group>"; };
 		22B8CD0719679D5A00D0D795 /* revealXYZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = revealXYZViewController.m; sourceTree = "<group>"; };
+		3D883DFD1BC949F08E63F150 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		44F0612726504C0EA14F1028 /* libPods-reveal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reveal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46DEE99C05CD445B8BB5DA68 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		78EF78B7FE9B4C1695F6CF14 /* Pods-reveal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reveal.xcconfig"; path = "Pods/Pods-reveal.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 				2281D6A619186BCE0096129A /* revealTests */,
 				2281D67A19186BCE0096129A /* Frameworks */,
 				2281D67919186BCE0096129A /* Products */,
+				78EF78B7FE9B4C1695F6CF14 /* Pods-reveal.xcconfig */,
+				3D883DFD1BC949F08E63F150 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +119,8 @@
 				2281D67D19186BCE0096129A /* CoreGraphics.framework */,
 				2281D67F19186BCE0096129A /* UIKit.framework */,
 				2281D6A019186BCE0096129A /* XCTest.framework */,
+				44F0612726504C0EA14F1028 /* libPods-reveal.a */,
+				46DEE99C05CD445B8BB5DA68 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2281D6B019186BCE0096129A /* Build configuration list for PBXNativeTarget "reveal" */;
 			buildPhases = (
+				4966F937E5C84E36A7D70AFF /* Check Pods Manifest.lock */,
 				2281D67419186BCE0096129A /* Sources */,
 				2281D67519186BCE0096129A /* Frameworks */,
 				2281D67619186BCE0096129A /* Resources */,
+				7AF32D5946A642E3B021E59C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +264,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4966F937E5C84E36A7D70AFF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7AF32D5946A642E3B021E59C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2281D67419186BCE0096129A /* Sources */ = {
@@ -380,6 +423,7 @@
 		};
 		2281D6B119186BCE0096129A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D883DFD1BC949F08E63F150 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -393,6 +437,7 @@
 		};
 		2281D6B219186BCE0096129A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D883DFD1BC949F08E63F150 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

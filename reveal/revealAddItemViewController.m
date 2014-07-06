@@ -8,6 +8,8 @@
 
 #import "revealAddItemViewController.h"
 
+//#import "IOSLinkedInAPI/LIALinkedInApplication.h
+
 @interface revealAddItemViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *commentTextField;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
@@ -62,19 +64,9 @@
     return self;
 }
 
-- (void)loadTextView
-{
-    CGRect frameRect = self.commentBox.frame;
-    frameRect.size.height = 240;
-    self.commentBox.frame = frameRect;
-    
-    
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self loadTextView];
     [scroller setScrollEnabled:YES];
     [scroller setContentSize:CGSizeMake(320, 1000)];
 }
