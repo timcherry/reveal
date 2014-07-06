@@ -9,8 +9,9 @@
 #import "revealAddItemViewController.h"
 
 @interface revealAddItemViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *TextField;
+@property (weak, nonatomic) IBOutlet UITextField *companyTextField;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UITextField *TextField;
 @property (weak, nonatomic) IBOutlet UITextField *commentBox;
 
 @end
@@ -19,7 +20,8 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if (sender != self.doneButton) return;
-    if (self.textField.text.length > 0) {
+    if (self.companyTextField.text.length > 0) {
+        NSLog(self.companyTextField.text);
         self.toDoItem = [[revealListItem alloc] init];
         self.toDoItem.itemName = self.textField.text;
         self.toDoItem.completed = NO;
