@@ -23,10 +23,31 @@
 {
     if (sender != self.doneButton) return;
     if (self.companyTextField.text.length > 0) {
-        NSLog(self.companyTextField.text);
-        NSLog(self.titleTextField.text);
-        NSLog(self.commentTextField.text);
+        
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:8000/post"]];
+        [request setHTTPMethod:@"POST"];
+        
+        
+        
+        NSError *jsonParsingError = nil;
+        NSDictionary *postDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  self.companyTextField.text, @"company",
+                                  self.titleTextField.text, @"position",
+                                  self.commentTextField.text, @"comment", nil];
+        
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postDict options:NSJSONWritingPrettyPrinted error:&jsonParsingError];
+            
+        NSString *postString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        
+        
+        NSLog(@"Posting %@", postString);
+
+        [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
+        
+        NSData *response = [NSURLConnection sendSynchronousRequest:request
+                                                 returningResponse:nil error:nil];
     }
+    
 }
 
 - (IBAction)textField:(id)sender {

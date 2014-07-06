@@ -120,11 +120,11 @@
 		2281D68119186BCE0096129A /* reveal */ = {
 			isa = PBXGroup;
 			children = (
+				2281D6B619186F850096129A /* Main.storyboard */,
 				2281D68A19186BCE0096129A /* revealAppDelegate.h */,
+				2281D68B19186BCE0096129A /* revealAppDelegate.m */,
 				22B8CD0619679D5A00D0D795 /* revealXYZViewController.h */,
 				22B8CD0719679D5A00D0D795 /* revealXYZViewController.m */,
-				2281D68B19186BCE0096129A /* revealAppDelegate.m */,
-				2281D6B619186F850096129A /* Main.storyboard */,
 				2281D6BB19188FFE0096129A /* revealAddItemViewController.h */,
 				2281D6BC19188FFE0096129A /* revealAddItemViewController.m */,
 				2281D69919186BCE0096129A /* Images.xcassets */,
