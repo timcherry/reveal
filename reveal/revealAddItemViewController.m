@@ -26,11 +26,6 @@
         NSLog(self.companyTextField.text);
         NSLog(self.titleTextField.text);
         NSLog(self.commentTextField.text);
-
-
-        self.toDoItem = [[revealListItem alloc] init];
-        self.toDoItem.itemName = self.textField.text;
-        self.toDoItem.completed = NO;
     }
 }
 
