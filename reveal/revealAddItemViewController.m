@@ -9,6 +9,8 @@
 #import "revealAddItemViewController.h"
 
 @interface revealAddItemViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *commentTextField;
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *companyTextField;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (weak, nonatomic) IBOutlet UITextField *TextField;
@@ -22,6 +24,10 @@
     if (sender != self.doneButton) return;
     if (self.companyTextField.text.length > 0) {
         NSLog(self.companyTextField.text);
+        NSLog(self.titleTextField.text);
+        NSLog(self.commentTextField.text);
+
+
         self.toDoItem = [[revealListItem alloc] init];
         self.toDoItem.itemName = self.textField.text;
         self.toDoItem.completed = NO;

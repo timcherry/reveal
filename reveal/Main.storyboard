@@ -92,10 +92,12 @@
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="TextField" destination="kaF-OD-M89" id="19j-fq-Ap7"/>
+                        <outlet property="commentTextField" destination="nhk-Z4-xcj" id="DWa-Ly-7nt"/>
                         <outlet property="companyTextField" destination="kaF-OD-M89" id="Emp-Rs-9pW"/>
                         <outlet property="doneButton" destination="y63-Fq-yUq" id="Li8-e8-UQq"/>
                         <outlet property="scroller" destination="7Fa-k1-PAs" id="O3i-ut-FCt"/>
                         <outlet property="textField" destination="kaF-OD-M89" id="pvD-vU-vYf"/>
+                        <outlet property="titleTextField" destination="lTY-1n-DC5" id="etn-nK-SSH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4q-u2-TyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
