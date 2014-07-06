@@ -10,4 +10,6 @@
 
 @interface revealXYZViewController : UIViewController
 
+- (IBAction)unwindAddComment:(UIStoryboardSegue *)segue;
+
 @end

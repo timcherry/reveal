@@ -66,7 +66,27 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Comment" id="7eY-ct-YJW">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="y63-Fq-yUq"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="TeQ-Tv-fXn">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LfD-dt-Hpz">
+                                <rect key="frame" x="16" y="5" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ab5-C3-gCt" kind="unwind" unwindAction="unwindAddComment:" id="KYo-fA-QJa"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="unwindAddComment:" destination="d4q-u2-TyR" id="D9X-4B-37c"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="y63-Fq-yUq">
+                            <connections>
+                                <segue destination="Ab5-C3-gCt" kind="unwind" unwindAction="unwindAddComment:" id="ETR-6n-0h2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
@@ -79,6 +99,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4q-u2-TyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ab5-C3-gCt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3226" y="-1039"/>
         </scene>
