@@ -15,7 +15,7 @@
 
 - (IBAction)unwindAddComment:(UIStoryboardSegue *)segue
 {
-    
+    [self loadData];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -27,7 +27,7 @@
     return self;
 }
 
-- (void)loadInitialData {
+- (void)loadData {
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL
                                                           URLWithString:@"http://localhost:8000/api"]];
@@ -102,7 +102,7 @@
 {
     [super viewDidLoad];
     //[self.view setBackgroundColor:[UIColor blackColor]];
-    [self loadInitialData];
+    [self loadData];
 //
 //    NSString *foobar = @"abcdefg";
 //    self.textLabel.text = foobar;
