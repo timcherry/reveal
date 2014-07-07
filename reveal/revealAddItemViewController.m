@@ -8,7 +8,8 @@
 
 #import "revealAddItemViewController.h"
 
-//#import "IOSLinkedInAPI/LIALinkedInApplication.h
+#import "IOSLinkedInAPI/LIALinkedInApplication.h"
+#import "IOSLinkedInAPI/LIALinkedInHttpClient.h"
 
 @interface revealAddItemViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *commentTextField;
@@ -64,11 +65,19 @@
     return self;
 }
 
+- (void) linkedInClient{
+    /*LIALinkedInApplication *application = [LIALinkedInApplication applicationWithRedirectURL:
+                                           @"http://www.ancientprogramming.com/liaexample"
+                                           clientId:@"clientId"
+                                           clientSecret:@"clientSecret"
+                                           state:@"DCEEFWF45453sdffef424"
+                                           grantedAccess:@[@"r_fullprofile", @"r_network"]];
+    return [LIALinkedInHttpClient clientForApplication:application presentingViewController:nil];*/
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [scroller setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320, 1000)];
 }
 
 - (void)didReceiveMemoryWarning
