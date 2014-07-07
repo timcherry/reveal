@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Company" borderStyle="roundedRect" minimumFontSize="17" id="kaF-OD-M89">
-                                <rect key="frame" x="20" y="191" width="280" height="30"/>
+                                <rect key="frame" x="20" y="133" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -44,13 +44,13 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" minimumFontSize="17" id="lTY-1n-DC5">
-                                <rect key="frame" x="20" y="139" width="280" height="30"/>
+                                <rect key="frame" x="20" y="184" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Comment..." id="nhk-Z4-xcj">
-                                <rect key="frame" x="20" y="258" width="280" height="194"/>
+                                <rect key="frame" x="20" y="238" width="280" height="267"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
@@ -92,11 +92,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
-                        <outlet property="TextField" destination="kaF-OD-M89" id="19j-fq-Ap7"/>
                         <outlet property="commentTextField" destination="nhk-Z4-xcj" id="DWa-Ly-7nt"/>
                         <outlet property="companyTextField" destination="kaF-OD-M89" id="Emp-Rs-9pW"/>
                         <outlet property="doneButton" destination="y63-Fq-yUq" id="Li8-e8-UQq"/>
-                        <outlet property="textField" destination="kaF-OD-M89" id="pvD-vU-vYf"/>
                         <outlet property="titleTextField" destination="lTY-1n-DC5" id="etn-nK-SSH"/>
                     </connections>
                 </viewController>

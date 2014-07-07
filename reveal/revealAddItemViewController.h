@@ -11,6 +11,7 @@
 @interface revealAddItemViewController : UIViewController{
     IBOutlet UIScrollView *scroller;
 }
+
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end

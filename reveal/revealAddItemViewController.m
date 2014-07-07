@@ -8,8 +8,8 @@
 
 #import "revealAddItemViewController.h"
 
-#import "IOSLinkedInAPI/LIALinkedInApplication.h"
-#import "IOSLinkedInAPI/LIALinkedInHttpClient.h"
+//#import "IOSLinkedInAPI/LIALinkedInApplication.h"
+//#import "IOSLinkedInAPI/LIALinkedInHttpClient.h"
 
 @interface revealAddItemViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *commentTextField;
@@ -17,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *companyTextField;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (weak, nonatomic) IBOutlet UITextField *TextField;
-@property (weak, nonatomic) IBOutlet UITextField *commentBox;
 
 @end
 
@@ -75,9 +74,17 @@
     return [LIALinkedInHttpClient clientForApplication:application presentingViewController:nil];*/
 }
 
+- (void)commentBoxBorder{
+    self.commentTextField.layer.cornerRadius=8.0f;
+    //self.commentTextField.layer.masksToBounds=YES;
+    self.commentTextField.layer.borderColor=[[UIColor grayColor]CGColor];
+    self.commentTextField.layer.borderWidth= 0.2f;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self commentBoxBorder];
 }
 
 - (void)didReceiveMemoryWarning
